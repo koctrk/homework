@@ -1,0 +1,11 @@
+---
+
+- name: Add users
+  hosts: webservers
+  roles:
+	-RS
+	-MS
+	-BS
+	-JS
+	-SS
+  

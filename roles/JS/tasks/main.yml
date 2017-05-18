@@ -1,0 +1,11 @@
+---
+#Add user JS
+- user:
+        name: Jerry Smith  
+        shell: /bin/bash
+        home: /tmp/jerry  
+
+- name: Set authorized key
+  authorized_key:
+        user: Jerry Smith  
+        key: "{{ lookup ('file', '/home/krepin/.ssh/id_rsa.pub') }}"

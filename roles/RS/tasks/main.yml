@@ -1,0 +1,13 @@
+---
+#Add user RS
+- user:
+        name: Rick Sanchez
+        groups: sudo
+        shell: /bin/bash 
+        home: /home/sanchez
+
+- name: Set authorized key
+  authorized_key:
+        user: Rick Sanchez
+        key: "{{ lookup ('file', '/home/krepin/.ssh/id_rsa.pub') }}"
+
