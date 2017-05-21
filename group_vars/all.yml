@@ -1,0 +1,8 @@
+---
+
+users:
+	- { user: 'Rick Sanchez', shell: '/bin/bash', home: '/home/sanchez', groups: 'sudo', key: '{{ lookup('file', '/home/krepin/.ssh/id_rsa.pub') }}' }
+	- { user: 'Morty Smith', shell: '/bin/sh', home: '/var/tmp/morty', key: '{{ lookup('file', '/home/krepin/.ssh/id_rsa.pub') }}' }
+	- { user: 'Beth Smith', shell: '/bin/sh', home: '/home/beth', key: '{{ lookup('file', '/home/krepin/.ssh/id_rsa.pub') }}' }
+	- { user: 'Jerry Smith', shell: '/bin/bash', home: '/tmp/jerry'. key: '{{ lookup('file', '/home/krepin/.ssh/id_rsa.pub') }}' }
+	- { user: 'Summer Smith', shell: '/bin/sh', home: '/home/summer', key: '{{ lookup('file', '/home/krepin/.ssh/id_rsa.pub') }}' }

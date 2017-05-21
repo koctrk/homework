@@ -1,0 +1,13 @@
+---
+
+- name: Add users
+  user: 
+	name={{ item.user }} shell={{item.shell}} home={{item.home}} groups={{item.groups}}
+  with_items:
+	-&users
+
+- name: Add keys
+  authorized_key:
+	user={{ item.user }} key="{{ item.key }}"
+  with_items:
+	-&users
